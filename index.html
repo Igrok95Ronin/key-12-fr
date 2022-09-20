@@ -23,41 +23,40 @@ $title = $text . ' ' . $city;
 </head>
 
 <body>
-
-
     <!--Шапка сайта-->
     <header class="header">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 container">
-                    <h1 class="header__title">header</h1><!-- + h1-h6. -->
                 </div>
             </div>
         </div>
-        <!-- Навигационные ссылки -->
-        <nav class="header-nav">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 container">...</div>
-                </div>
-            </div>
-        </nav>
     </header>
     <!-- Основное содержимое страницы -->
     <main class="main">
-        <h1 class="main__title">main</h1><!-- - h1-h6. -->
-        <!-- Раздел страницы-->
-        <section class="first-section">
-            <h2 class="first-section__title">section</h2><!-- + h2-h6... -->
-            <article class="first-article">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 container">
-                            <h2 class="first-article__title">article</h2><!-- + h2-h6... -->
+        <section class="locksmith">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 container">
+                        <div class="locksmith__box">
+                            <h1 class="locksmith__title">Serrurier à proximité</h1>
+                            <div class="locksmith__inner">
+                                <div class="locksmith__left">
+                                    <img class="locksmith__img" src="./assets/img/aufsperrdienst.jpeg" alt="" >
+                                </div>
+                                <div class="locksmith__right">
+                                    <img class="locksmith__img" src="./assets/img/tueroeffnung.jpeg" alt="" >
+                                </div>
+                            </div>
+                            <p class="locksmith__dscr">Serrurier dépannage</p>
+                            <p class="locksmith__dscr">Porte fermée? Serrure cassé?</p>
+                            <div class="locksmith__wrapper">
+                                <a class="locksmith__btn" href="#"><span>111222333</span></a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </article>
+            </div>
         </section>
     </main>
     <!--Нижний колонтитул страницы-->
@@ -67,19 +66,10 @@ $title = $text . ' ' . $city;
                 <div class="col-12 container">footer</div>
             </div>
         </div>
-        <!-- Навигационные ссылки -->
-        <nav class="footer-nav">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 container">...</div>
-                </div>
-            </div>
-        </nav>
     </footer>
     <!--Style-->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.min.css" rel="stylesheet">
-    <script src="assets/js/main.min.js"></script>
 </body>
 
 </html>

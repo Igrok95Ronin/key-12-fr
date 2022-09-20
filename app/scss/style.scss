@@ -1,0 +1,91 @@
+@mixin btn {
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 20px 10px 50px;
+    border-radius: 5px;
+    background-color: $primaryColor;
+    font-weight: 700;
+    transition: all .5s;
+    &:hover {
+        color: #fff;
+        background-color: rgb(202, 130, 53);
+    }
+    span{
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            background: url(../../assets/img/telephone-fill.svg);
+            width: 20px;
+            height: 20px;
+            left: -25px;
+            top: 50%;
+            transform: translateY(-40%);
+        }
+    }
+}
+$primaryColor: rgba(197,143,86,1);
+* {
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul,
+li{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body{
+    margin: auto;
+    padding: 0;
+    font: 16px Verdana, Helvetica,Arial,sans-serif;
+    max-width: 1920px;
+    min-width: 320px;
+    color: rgba(60,60,60,1);
+}
+//header
+.header {
+    background-color: $primaryColor;
+    height: 15px;
+}
+//locksmith
+.locksmith__title {
+    text-align: center;
+    background-color: #3c3c3c;
+    color: #fff;
+    margin: 0;
+    padding: 8px 0;
+    font-size: 33px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+.locksmith__inner {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.locksmith__img {
+    width: 100%;
+}
+.locksmith__dscr {
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    margin: 8px 0;
+}
+.locksmith__wrapper {
+    background-color:#3c3c3c;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 5px;
+}
+.locksmith__btn {
+    @include btn();
+}
