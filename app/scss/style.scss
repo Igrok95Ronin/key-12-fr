@@ -115,3 +115,36 @@ body{
     font-weight: bold;
     line-height: 1;
 }
+//locksmith2
+.locksmith2 {
+    margin-top: 50px;
+}
+.locksmith2__box {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+.locksmith2__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.locksmith2__title {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 50px;
+}
+.locksmith2__dscr {
+    font-size: 16px;
+    line-height: 1.5;
+    span{
+        font-weight: 900;
+    }
+}
+.locksmith2__img {
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+//
