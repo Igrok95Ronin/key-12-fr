@@ -89,3 +89,29 @@ body{
 .locksmith__btn {
     @include btn();
 }
+//
+.services {
+}
+.services__title {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.1;
+    text-align: center;
+    margin: 30px 0;
+}
+.services__box {
+    display: flex;
+    justify-content: center;
+    ul{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 200px;
+        row-gap: 10px;
+    }
+}
+.services__list {
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+}
