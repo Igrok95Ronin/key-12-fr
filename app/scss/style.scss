@@ -138,13 +138,82 @@ body{
 .locksmith2__dscr {
     font-size: 16px;
     line-height: 1.5;
+    margin-bottom: 0;
     span{
         font-weight: 900;
     }
 }
 .locksmith2__img {
-    max-width: 100%;
     object-fit: cover;
+    height: 100%;
+    width: 100%;
     border-radius: 10px;
 }
-//
+//change
+.change {
+    margin: 50px 0;
+}
+.change__title {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.change__dscr {
+    font-size: 16px;
+    line-height: 1.5;
+    span{
+        font-weight: 900;
+    }
+}
+//team
+.team {
+    margin-top: 80px;
+}
+.team__title {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.team__box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+}
+.team__wrapper{
+    text-align: center;
+}
+.team__wrapper2 {
+    outline: auto;
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.team__img {
+    max-width: 100%;
+    object-fit: cover;
+}
+.team__name {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+.team__age {
+    margin-bottom: 5px;
+}
+.team__dol {
+    font-size: 16px;
+    line-height: 1.5;
+    span{
+        font-weight: 700;
+    }
+}
+.team__min-img {
+    border-radius: 50%;
+    width: 20px;
+    margin-right: 10px;
+}
