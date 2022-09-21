@@ -217,3 +217,33 @@ body{
     width: 20px;
     margin-right: 10px;
 }
+//min
+.min {
+    margin: 80px 0;
+}
+.min__title {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.min__box {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.min__inner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.min__img {
+    border-radius: 50%;
+}
+.min__name {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0;
+}
