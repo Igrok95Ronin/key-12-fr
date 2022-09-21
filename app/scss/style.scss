@@ -284,3 +284,24 @@ body{
     height: 100%;
     object-fit: cover;
 }
+//partners
+.partners {
+    margin: 80px 0;
+}
+.partners__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+.partners__box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: center;
+}
+.partners__logo {
+    max-width: 100%;
+    object-fit: cover;
+}
