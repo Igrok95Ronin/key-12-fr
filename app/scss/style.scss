@@ -270,3 +270,17 @@ body{
         background-color: black;
     }
 }
+//images
+.images {
+    margin-top: 30px;
+}
+.images__box {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.images__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
