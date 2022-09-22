@@ -24,6 +24,7 @@
         }
     }
 }
+$fontSize: calc(1vw + 1vw);
 $primaryColor: rgba(197,143,86,1);
 * {
     box-sizing: border-box;
@@ -63,7 +64,7 @@ body{
     color: #fff;
     margin: 0;
     padding: 8px 0;
-    font-size: 33px;
+    font-size: clamp(24px, 3vw, 33px);
     font-weight: bold;
     line-height: 1.2;
 }
@@ -229,7 +230,7 @@ body{
     margin-bottom: 50px;
 }
 .min__box {
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
@@ -305,11 +306,106 @@ body{
     max-width: 100%;
     object-fit: cover;
 }
-//
+//footer
 .footer {
     background-color: $primaryColor;
     font-weight: 700;
     color: #fff;
     padding: 10px 0;
     text-align: center;
+    margin-top: 30px;
+}
+.fixed {
+    display: none;
+}
+//media
+@media(max-width: 1200px) {
+    .team__box {
+        gap: 20px;
+    }
+}
+@media(max-width: 900px) {
+    .services__box ul {
+        gap: 50px;
+        row-gap: 10px;
+    }
+    .locksmith2__title {
+        font-size: 24px;
+    }
+    .team__box {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .team__title {
+        font-size: 24px;
+    }
+    .min__box {
+        grid-template-columns: 1fr;
+    }
+    .min__inner {
+        gap: 30px;
+        flex-direction: column;
+    }
+    .ambulance__box {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .images__box {
+        grid-template-columns: 1fr;
+    }
+    .min {
+        margin: 60px 0;
+    }
+}
+@media(max-width: 767px) {
+    .locksmith__inner {
+        grid-template-columns: 1fr;
+    }
+    .services__box ul {
+        grid-template-columns: 1fr;
+    }
+    .locksmith2__box {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .locksmith2__title {
+        text-align: center;
+    }
+    .change__title {
+        font-size: 24px;
+    }
+    .team {
+        margin-top: 50px;
+    }
+    .min__title {
+        font-size: 24px;
+    }
+    .min__name {
+        font-size: 15px;
+    }
+    .partners__box {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .partners {
+        margin: 40px 0;
+    }
+    .partners__title {
+        font-size: 26px;
+    }
+}
+@media(max-width: 425px) {
+    .locksmith__wrapper {
+        padding: 8px;
+    }
+    .locksmith__btn {
+        width: 100%;
+    }
+    .fixed {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        border-radius: 0;
+        background-color: $primaryColor;
+    }
 }
