@@ -1,11 +1,11 @@
 <?php
-$site_data      = json_decode(file_get_contents('http://templates.jquery.link/api/' . $_SERVER['HTTP_HOST']), true);
+$site_data      = json_decode(file_get_contents('http://local.jquery.link/api/' . $_SERVER['HTTP_HOST']), true);
 
 $phone_name     = $site_data['phone_name'];
 $phone_href     = $site_data['phone_href'];
 
-$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'Entrumpelung'));
-$city           = str_replace('+', ' ', trim($_GET['n'] ?? 'in der nahe'));
+$text           = str_replace('+', ' ', trim($_GET['t'] ?? 'Serrurier'));
+$city           = str_replace('+', ' ', trim($_GET['n'] ?? 'à proximité'));
 
 $title = $text . ' ' . $city;
 ?>
@@ -41,7 +41,7 @@ $title = $text . ' ' . $city;
                 <div class="row">
                     <div class="col-12 container">
                         <div class="locksmith__box">
-                            <h1 class="locksmith__title">Serrurier à proximité</h1>
+                            <h1 class="locksmith__title"><?= $title ?></h1>
                             <div class="locksmith__inner">
                                 <div class="locksmith__left">
                                     <img class="locksmith__img" src="./assets/img/aufsperrdienst.jpeg" alt="">
@@ -53,7 +53,7 @@ $title = $text . ' ' . $city;
                             <p class="locksmith__dscr">Serrurier dépannage</p>
                             <p class="locksmith__dscr">Porte fermée? Serrure cassé?</p>
                             <div class="locksmith__wrapper">
-                                <a class="locksmith__btn" href="#"><span>111222333</span></a>
+                                <a class="locksmith__btn" href="<?= $phone_href ?>"><span><?= $phone_name ?></span></a>
                             </div>
                         </div>
                     </div>
@@ -90,10 +90,10 @@ $title = $text . ' ' . $city;
                     <div class="col-12 container">
                         <div class="locksmith2__box">
                             <div class="locksmith2__left">
-                                <h2 class="locksmith2__title">Serrurier à proximité
+                                <h2 class="locksmith2__title">Serrurier <?= $city ?>
                                     dépannage 24-7 24h/24</h2>
                                 <p class="locksmith2__dscr">
-                                    En tant que Serrurier <span>à proximité</span> nous assurons la plus grande sécurité
+                                    En tant que Serrurier <span><?= $city ?></span> nous assurons la plus grande sécurité
                                     pour votre maison ou votre local. Faites appel à notre serrurier qualifié et honnête
                                     pour une ouverture de porte, un changement de serrure ou une installation de porte
                                     blindée.
@@ -112,10 +112,10 @@ $title = $text . ' ' . $city;
                 <div class="row">
                     <div class="col-12 container">
                         <div class="change__box">
-                            <h2 class="change__title">Changement de serrure à proximité</h2>
+                            <h2 class="change__title">Changement de serrure <?= $city ?></h2>
                             <p class="change__dscr">Il est nécessaire de changer la serrure régulièrement, surtout si
                                 vous vous rendez compte que votre serrure est défectueuse. Il est également important de
-                                nous faire appel, Serrurier <span>à proximité</span> , pour changer votre serrure.</p>
+                                nous faire appel, Serrurier <span><?= $city ?></span> , pour changer votre serrure.</p>
                             <p class="change__dscr">Il est toujours mieux de confier le changement de serrure à un
                                 serrurier confirmé. Nos artisans serruriers sont des experts et vous propose des
                                 prestations de changement de serrures adaptées à vos besoins et – surtout – résistantes.
@@ -173,7 +173,7 @@ $title = $text . ' ' . $city;
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 container">
-                        <h2 class="min__title">Intervention serrurier 20 - 30 min. à proximité</h2>
+                        <h2 class="min__title">Intervention serrurier 20 - 30 min. <?= $city ?></h2>
                         <div class="min__box">
                             <div class="min__inner">
                                 <img class="min__img" src="./assets/img/11.png" alt="" >
@@ -198,7 +198,7 @@ $title = $text . ' ' . $city;
                     <div class="col-12 container">
                         <div class="ambulance__box">
                             <h2 class="ambulance__title">En urgence par téléphone</h2>
-                            <a class="ambulance__btn" href="#" ><span>111222333</span></a>
+                            <a class="ambulance__btn" href="<?= $phone_href ?>" ><span><?= $phone_name ?></span></a>
                         </div>
                     </div>
                 </div>
@@ -237,7 +237,7 @@ $title = $text . ' ' . $city;
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 container">Copyright © 2022</div>
-                <a class="ambulance__btn fixed" href="#" ><span>111222333</span></a>
+                <a class="ambulance__btn fixed" href="<?= $phone_href ?>" ><span><?= $phone_name ?></span></a>
             </div>
         </div>
     </footer>
